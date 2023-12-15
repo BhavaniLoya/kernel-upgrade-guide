@@ -2,20 +2,33 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kernel Upgrade Guide</title>
+    <title>Kernel Upgrade Guide-By Bhavani Loya</title>
     <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
     <script>
         function selectCategory(category) {
+            var iconsContainer = document.getElementById('icons');
+            iconsContainer.innerHTML = ''; // Clear previous options
+
             if (category === 'incident') {
-                // Populate icons for Incident category
-                // You can modify this function to populate the appropriate icons
-                // For example: document.getElementById('icons').innerHTML = '<img src="icon1.png"> ...';
-                console.log('Incident category selected');
-            } else if (category === 'change') {
-                // Populate icons for Change category
-                // Similarly, modify this part to display the icons for the Change category
-                console.log('Change category selected');
+                iconsContainer.innerHTML += '<img src="kernel_icon.png" alt="Kernel" onclick="showResult(\'kernel\')">';
+                iconsContainer.innerHTML += '<img src="support_icon.png" alt="Support" onclick="showResult(\'support\')">';
+            } else if (category === 'DLM change') {
+                iconsContainer.innerHTML += '<img src="approval_yes.png" alt="Approval Yes" onclick="showResult(\'yes\')">';
+                iconsContainer.innerHTML += '<img src="approval_no.png" alt="Approval No" onclick="showResult(\'no\')">';
             }
+        }
+
+        function showResult(selection) {
+            var result = '';
+
+            if (selection === 'kernel' || selection === 'support') {
+                result = 'Selected: ' + selection.charAt(0).toUpperCase() + selection.slice(1);
+            } else if (selection === 'yes' || selection === 'no') {
+                result = 'Approval: ' + selection.toUpperCase();
+            }
+
+            // Display the result or perform further actions (for demonstration, logging to console)
+            console.log(result);
         }
     </script>
 </head>
