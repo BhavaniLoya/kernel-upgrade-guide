@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kernel Upgrade Guide</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <script>
+        function selectCategory(category) {
+            if (category === 'incident') {
+                // Populate icons for Incident category
+                // You can modify this function to populate the appropriate icons
+                // For example: document.getElementById('icons').innerHTML = '<img src="icon1.png"> ...';
+                console.log('Incident category selected');
+            } else if (category === 'change') {
+                // Populate icons for Change category
+                // Similarly, modify this part to display the icons for the Change category
+                console.log('Change category selected');
+            }
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Kernel Upgrade Guide</h1>
+        <div class="category-icons">
+            <img src="incident_icon.png" alt="Incident" onclick="selectCategory('incident')">
+            <img src="change_icon.png" alt="Change" onclick="selectCategory('change')">
+        </div>
+    </header>
+
+    <main id="icons">
+        <!-- Icons for Incident or Change category will be populated here -->
+    </main>
+</body>
+</html>
