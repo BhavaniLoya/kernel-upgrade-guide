@@ -2,47 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kernel Upgrade Guide-By Bhavani Loya</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
-    <script>
-        function selectCategory(category) {
-            var iconsContainer = document.getElementById('icons');
-            iconsContainer.innerHTML = ''; // Clear previous options
-
-            if (category === 'incident') {
-                iconsContainer.innerHTML += '<img src="kernel_icon.png" alt="Kernel" onclick="showResult(\'kernel\')">';
-                iconsContainer.innerHTML += '<img src="support_icon.png" alt="Support" onclick="showResult(\'support\')">';
-            } else if (category === 'DLM change') {
-                iconsContainer.innerHTML += '<img src="approval_yes.png" alt="Approval Yes" onclick="showResult(\'yes\')">';
-                iconsContainer.innerHTML += '<img src="approval_no.png" alt="Approval No" onclick="showResult(\'no\')">';
-            }
+    <title>Kernel Upgrade Guide by Bhargav</title>
+    <style>
+        /* Add your CSS styles here */
+        /* For simplicity, I'm not adding detailed styling in this example */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            text-align: center;
         }
 
-        function showResult(selection) {
-            var result = '';
-
-            if (selection === 'kernel' || selection === 'support') {
-                result = 'Selected: ' + selection.charAt(0).toUpperCase() + selection.slice(1);
-            } else if (selection === 'yes' || selection === 'no') {
-                result = 'Approval: ' + selection.toUpperCase();
-            }
-
-            // Display the result or perform further actions (for demonstration, logging to console)
-            console.log(result);
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px 0;
         }
-    </script>
+
+        .options {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .options img {
+            width: 100px;
+            height: 100px;
+            margin: 0 20px;
+            cursor: pointer;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .options img:hover {
+            transform: scale(1.1);
+        }
+    </style>
 </head>
 <body>
     <header>
-        <h1>Kernel Upgrade Guide</h1>
-        <div class="category-icons">
-            <img src="incident_icon.png" alt="Incident" onclick="selectCategory('incident')">
-            <img src="change_icon.png" alt="Change" onclick="selectCategory('change')">
-        </div>
+        <h1>Kernel Upgrade Guide by Bhargav</h1>
     </header>
 
-    <main id="icons">
-        <!-- Icons for Incident or Change category will be populated here -->
-    </main>
+    <div class="options">
+        <img src="incident_icon.png" alt="Incident" onclick="showApprovalOptions()">
+        <img src="dlm_change_icon.png" alt="DLM Change" onclick="showChangeOptions()">
+    </div>
+
+    <div id="icons" style="margin-top: 30px;">
+        <!-- Options will be populated here -->
+    </div>
+
+    <script>
+        function showApprovalOptions() {
+            var iconsContainer = document.getElementById('icons');
+            iconsContainer.innerHTML = '';
+
+            iconsContainer.innerHTML += '<h2>Approval</h2>';
+            iconsContainer.innerHTML += '<button onclick="showResult(\'Yes\')">Yes</button>';
+            iconsContainer.innerHTML += '<button onclick="showResult(\'No\')">No</button>';
+        }
+
+        function showChangeOptions() {
+            window.location.href = 'next_page.html'; // Redirect to the next page with options for DLM Change
+        }
+
+        function showResult(selection) {
+            alert('Selected: ' + selection); // Display the selected option as an alert (you can customize this as needed)
+        }
+    </script>
 </body>
 </html>
