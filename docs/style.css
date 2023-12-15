@@ -1,10 +1,11 @@
 body {
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #ffffff, #f0f0f0); /* Adjust the colors as needed */
+    background-image: url('https://github.com/BhavaniLoya/kernel-upgrade-guide/blob/main/docs/background.jpg'); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+    background-size: cover; /* Adjust as needed: 'cover', 'contain', or specific dimensions */
+    background-repeat: no-repeat;
     margin: 0;
     padding: 0;
 }
-
 
 /* Reset default margin and padding */
 body, h1, h2, p, ul {
