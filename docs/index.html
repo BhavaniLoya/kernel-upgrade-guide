@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Kernel Upgrade Guide by Bhargav</title>
+    <title>Kernel Upgrade Guide by Bhargav Loya</title>
     <style>
         /* Add your CSS styles here */
         /* For simplicity, I'm not adding detailed styling in this example */
@@ -64,7 +64,12 @@
         }
 
         function showChangeOptions() {
-            window.location.href = 'next_page.html'; // Redirect to the next page with options for DLM Change
+            var iconsContainer = document.getElementById('icons');
+            iconsContainer.innerHTML = '';
+
+            iconsContainer.innerHTML += '<h2>DLM Change</h2>';
+            iconsContainer.innerHTML += '<button onclick="showResult(\'Kernel\')">Kernel</button>';
+            iconsContainer.innerHTML += '<button onclick="showResult(\'Support Pack\')">Support Pack</button>';
         }
 
         function showResult(selection) {
