@@ -6,65 +6,67 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Updated CSS styles for a colorful Kernel Upgrade Guide */
 
-/* Reset default margin and padding */
-body, h1, h2, p, ul {
+/* Resetting default margin and padding for elements */
+body, h1, h2, button {
     margin: 0;
     padding: 0;
 }
 
-/* Basic styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f7f7f7;
+    margin: 0;
+    padding: 0;
+    text-align: center;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    text-align: center;
     padding: 20px 0;
 }
 
-h1 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.category-icons {
+.options {
     display: flex;
     justify-content: center;
-    margin-bottom: 20px;
+    margin-top: 20px;
 }
 
-.category-icons img {
-    width: 50px;
-    height: 50px;
-    margin: 0 10px;
+.options img {
+    width: 100px;
+    height: 100px;
+    margin: 0 20px;
     cursor: pointer;
     transition: transform 0.3s ease-in-out;
 }
 
-.category-icons img:hover {
-    transform: scale(1.2);
-}
-
-/* Additional styles for the icons container */
-#icons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-/* Styles for the dynamically populated icons (customize as needed) */
-#icons img {
-    width: 80px;
-    height: 80px;
-    margin: 10px;
-    cursor: pointer;
-    transition: transform 0.3s ease-in-out;
-}
-
-#icons img:hover {
+.options img:hover {
     transform: scale(1.1);
+}
+
+#icons {
+    margin-top: 30px;
+}
+
+h2 {
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: #555;
+}
+
+button {
+    padding: 8px 20px;
+    margin: 5px;
+    cursor: pointer;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #FF5722;
 }
